@@ -24,7 +24,7 @@ import { HeaderModule } from './header/header.module';
     HomeComponent,
     AboutComponent,
     DashboardComponent,
-    //HeaderComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +32,7 @@ import { HeaderModule } from './header/header.module';
     HttpModule,
     AppRoutes,
     //SharedModule
-    HeaderModule
+    //HeaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

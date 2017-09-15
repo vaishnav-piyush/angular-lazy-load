@@ -7,14 +7,14 @@ import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
     declarations : [
-      HeaderComponent
+      //HeaderComponent
     ],
     imports : [
         CommonModule,
         //SharedModule
     ],
     exports : [
-        HeaderComponent
+        //HeaderComponent
     ],
     providers : []
 })

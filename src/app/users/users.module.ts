@@ -17,14 +17,14 @@ import { HeaderModule } from '../header/header.module';
         UsersComponent,
         UserListComponent,
         UserDetailsComponent,
-        HeaderComponent
+        //HeaderComponent
     ],
     imports : [
         CommonModule,
         UsersRoutings,
         //HeaderComponent
         //SharedModule
-        HeaderModule
+        //HeaderModule
     ],
     providers : []
 })
