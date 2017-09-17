@@ -4,17 +4,19 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header.component';
 
 import { SharedModule } from '../shared/shared.module';
+import { AppRoutes } from "app/app.routings";
 
 @NgModule({
     declarations : [
-      //HeaderComponent
+    //   HeaderComponent
     ],
     imports : [
         CommonModule,
         //SharedModule
+        // AppRoutes
     ],
     exports : [
-        //HeaderComponent
+        // HeaderComponent
     ],
     providers : []
 })

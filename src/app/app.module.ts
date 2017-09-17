@@ -15,24 +15,31 @@ import { HeaderComponent } from './header/header.component';
 import { SharedModule } from './shared/shared.module';
 
 import { HeaderModule } from './header/header.module';
+import { RouterModule } from "@angular/router";
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    AboutComponent,
-    DashboardComponent,
-    HeaderComponent
+    // HomeComponent,
+    // AboutComponent,
+    // DashboardComponent,
+    // HeaderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutes,
-    //SharedModule
-    //HeaderModule
+    SharedModule, 
+    RouterModule.forRoot([
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path : 'dashboard', loadChildren : 'app/shared/shared.module#SharedModule' },
+      { path : 'users', loadChildren : 'app/users/users.module#UserModule' }
+
+    ])
+    // AppRoutes
+    // HeaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

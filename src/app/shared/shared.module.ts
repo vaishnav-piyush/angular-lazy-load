@@ -2,17 +2,29 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HeaderComponent } from '../header/header.component';
+import { HomeComponent } from "app/home/home.component";
+import { AboutComponent } from "app/about/about.component";
+import { DashboardComponent } from "app/dashboard/dashboard.component";
+import { AppRoutes } from "app/app.routings";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
     declarations : [
-      //HeaderComponent
+      HeaderComponent,
+      HomeComponent, 
+      AboutComponent, 
+      DashboardComponent, 
     ],
     imports : [
-        CommonModule,
-        
+        CommonModule, 
+        AppRoutes
     ],
     exports : [
-       //HeaderComponent
+       HeaderComponent,
+       HomeComponent, 
+       AboutComponent, 
+       DashboardComponent,
+       RouterModule       
     ],
     providers : []
 })
