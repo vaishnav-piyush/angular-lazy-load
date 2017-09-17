@@ -8,35 +8,27 @@ import { HomeComponent } from './home/home.component';
 
 import { AboutComponent } from './about/about.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
-import { AppRoutes } from './app.routings';
 import { HeaderComponent } from './header/header.component';
-
 import { SharedModule } from './shared/shared.module';
-
 import { HeaderModule } from './header/header.module';
 import { RouterModule } from "@angular/router";
-
-
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    // HomeComponent,
-    // AboutComponent,
-    // DashboardComponent,
-    // HeaderComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    SharedModule, 
+    HeaderModule, 
     RouterModule.forRoot([
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-      { path : 'dashboard', loadChildren : 'app/shared/shared.module#SharedModule' },
-      { path : 'users', loadChildren : 'app/users/users.module#UserModule' }
-
+      { path : 'dashboard', loadChildren : 'app/header/header.module#HeaderModule' },
+      { path : 'users', loadChildren : 'app/users/users.module#UserModule' },
+      { path: 'login', component: LoginComponent}
     ])
     // AppRoutes
     // HeaderModule
