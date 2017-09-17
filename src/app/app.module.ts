@@ -6,13 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
-import { AboutComponent } from './about/about.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { HeaderComponent } from './header/header.component';
-import { SharedModule } from './shared/shared.module';
-import { HeaderModule } from './header/header.module';
+import { AboutComponent } from 'app/about/about.component';
+import { DashboardComponent } from 'app/dashboard/dashboard.component';
+import { HeaderComponent } from 'app/header/header.component';
+import { SharedModule } from 'app/shared/shared.module';
+import { HeaderModule } from 'app/header/header.module';
 import { RouterModule } from "@angular/router";
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from 'app/login/login.component';
+import { AppRoutes } from "app/app.routing";
 
 @NgModule({
   declarations: [
@@ -24,14 +25,7 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     HttpModule,
     HeaderModule, 
-    RouterModule.forRoot([
-      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-      { path : 'dashboard', loadChildren : 'app/header/header.module#HeaderModule' },
-      { path : 'users', loadChildren : 'app/users/users.module#UserModule' },
-      { path: 'login', component: LoginComponent}
-    ])
-    // AppRoutes
-    // HeaderModule
+    AppRoutes
   ],
   providers: [],
   bootstrap: [AppComponent]
